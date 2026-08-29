@@ -4,7 +4,7 @@
 
 ```bash
 sudo ip tuntap add dev tap0 mode tap user $USER
-sudo ip addr add 192.168.100.1/24 dev tap0
+sudo ip addr add 10.100.100.1/24 dev tap0
 sudo ip link set tap0 up
 ```
 
@@ -29,7 +29,7 @@ Use the correct vJunos adapter for `ge-0/0/0`.
 ```text
 configure
 
-set interfaces ge-0/0/0 unit 0 family inet address 192.168.100.2/24
+set interfaces ge-0/0/0 unit 0 family inet address 10.100.100.2/24
 ```
 
 ## 4. Configure user and SSH
